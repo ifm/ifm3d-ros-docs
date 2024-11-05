@@ -109,17 +109,14 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">six_cameras.launch</span></code></p></td>
-<td><p>Launches six nodes, reading data streams on ports 0, 1, 2, 3, 4 and 5. Provide coordinate frame transforms for each node. Note: you can use this example for less than six heads, but you will get a <code class="docutils literal notranslate"><span class="pre">timeout</span></code> error where no heads are connected. This does not disrupt the proper functioning of the connected heads.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">nodelet.launch</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">nodelet.launch</span></code></p></td>
 <td><p>This is handling the nodelet manager which makes it possible to launch a nodelet similarly as you would a simple node.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">head.launch</span></code></p></td>
-<td><p>Launches two data streams for both the 2D RGB imager and 3D TOF imager on a camera head. Default ports are 0 for 3D data (pcic_port_1:=50010) and 2 for 2D RGB data (pcic_port_2:=50012). For different port numbers input port as a parameter when launching.</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">camera_3d.launch</span></code></p></td>
+<td><p>Launches a single 3d camera stream - so only 3D data data. This launch file is comparable to a single camera setup (O3Ds and O3Xs)</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">camera.launch</span></code></p></td>
-<td><p>Launches a single camera stream - so only 3D data or 2D RGB data. This launch file is comparable to a single camera setup (O3Ds and O3Xs)</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">camera_2d.launch</span></code></p></td>
+<td><p>Launches a single 2d camera stream - so only 2D RGB data. This launch file is comparable to a single camera setup (O3Ds and O3Xs)</p></td>
 </tr>
 </tbody>
 </table>
@@ -127,9 +124,9 @@
 <h3>Nodelet launch structure<a class="headerlink" href="#nodelet-launch-structure" title="Link to this heading"></a></h3>
 <blockquote>
 <div><p>Note: The O3R platform can handle multiple data streams.*<br />
-The <code class="docutils literal notranslate"><span class="pre">camera.launch</span></code> file only launches a node for one data stream, on the default pcic port 50010. To launch a node for a different port, use:</p>
+The <code class="docutils literal notranslate"><span class="pre">camera_3d.launch</span></code> file only launches a node for one data stream, on the default pcic port 50010. To launch a node for a different port, use:</p>
 </div></blockquote>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ roslaunch ifm3d_ros_driver camera.launch pcic_port:=&lt;PORT_NUMBER&gt;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ roslaunch ifm3d_ros_driver camera_3d.launch pcic_port:=&lt;PORT_NUMBER&gt;
 </pre></div>
 </div>
 <p>The launch file(s) encapsulate several features:</p>
@@ -139,11 +136,11 @@ The <code class="docutils literal notranslate"><span class="pre">camera.launch</
 <li><p>It launches the camera nodelet itself.</p></li>
 <li><p>It publishes the static transform from the camera’s optical frame to a traditional ROS sensor frame as a tf2 <code class="docutils literal notranslate"><span class="pre">static_transform_publisher</span></code>.</p></li>
 </ol>
-<p>You can either use <a class="reference internal" href="#launch/camera.launch"><span class="xref myst">this launch file</span></a> directly, or, use it as a basis for integrating <code class="docutils literal notranslate"><span class="pre">ifm3d_ros</span></code> into your own robot software system.</p>
+<p>You can either use <a class="reference download internal" download="" href="../_downloads/b6c3936295070529c913e091f21732e0/camera_3d.launch"><span class="xref download myst">this launch file</span></a> directly, or, use it as a basis for integrating <code class="docutils literal notranslate"><span class="pre">ifm3d_ros</span></code> into your own robot software system.</p>
 <blockquote>
 <div><p>Note: the O3R camera heads carry two imagers, a 3D time-of-flight and a RGB imager.</p>
 </div></blockquote>
-<p>We provide the <code class="docutils literal notranslate"><span class="pre">head.launch</span></code> launchfile to handle a whole O3R camera head, that starts two nodes, one for the RGB image (we assume it is plugged in port 0), and one for the 3D imager (we assume it is plugged in port 2).</p>
+<p>We provide the <code class="docutils literal notranslate"><span class="pre">camer_2d.launch</span></code> launchfile to handle the RGB image (we assume it is plugged in port 0).</p>
 </section>
 </section>
 <section id="building-launch-files-distributed-systems">

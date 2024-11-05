@@ -97,7 +97,7 @@
              
   <section id="how-to-visualize-the-point-cloud-with-rviz">
 <h1>HOW to visualize the point cloud with RVIZ<a class="headerlink" href="#how-to-visualize-the-point-cloud-with-rviz" title="Link to this heading"></a></h1>
-<p>The included launch file <code class="docutils literal notranslate"><span class="pre">camera.launch</span></code> will publish and remap all topics and services to <code class="docutils literal notranslate"><span class="pre">/ifm3d_ros_driver/xxx</span></code>, for example the point cloud topic will be remapped to <code class="docutils literal notranslate"><span class="pre">/ifm3d_ros_driver/camera/cloud</span></code>.</p>
+<p>The included launch file <code class="docutils literal notranslate"><span class="pre">camera_3d.launch</span></code> will publish and remap all topics and services to <code class="docutils literal notranslate"><span class="pre">/ifm3d_ros_driver/xxx</span></code>, for example the point cloud topic will be remapped to <code class="docutils literal notranslate"><span class="pre">/ifm3d_ros_driver/camera/cloud</span></code>.</p>
 <p>When you open RVIZ for the first time and subscribe the point cloud topic to it, it will not be displayed as the transformation chain between the different reference frames is not complete.</p>
 <p>The first option is to use a “dummy” a static transform publisher to fix the missing link in the pose transformation chain:</p>
 <p>Open a new shell and run this simple <code class="docutils literal notranslate"><span class="pre">static_transform_publisher</span></code> to map the <code class="docutils literal notranslate"><span class="pre">ifm3d/camera_link</span></code> to the <code class="docutils literal notranslate"><span class="pre">map</span></code> frame.</p>
