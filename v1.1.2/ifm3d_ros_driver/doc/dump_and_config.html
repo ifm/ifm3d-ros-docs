@@ -145,40 +145,40 @@
 <p>Call this service via, e.g. for camera:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ rosservice call /ifm3d_ros_examples/camera/Dump 
 status: 0
-config: &quot;{\&quot;device\&quot;:{\&quot;clock\&quot;:{\&quot;currentTime\&quot;:1581287336449588512},\&quot;diagnostic\&quot;:{\&quot;temperatures\&quot;\
-  :[],\&quot;upTime\&quot;:196692000000000},\&quot;info\&quot;:{\&quot;device\&quot;:\&quot;0301\&quot;,\&quot;deviceTreeBinaryBlob\&quot;\
-  :\&quot;tegra186-quill-p3310-1000-c03-00-base.dtb\&quot;,\&quot;features\&quot;:{},\&quot;name\&quot;:\&quot;test\&quot;\
-  ,\&quot;partNumber\&quot;:\&quot;M03975\&quot;,\&quot;productionState\&quot;:\&quot;AA\&quot;,\&quot;serialNumber\&quot;:\&quot;000201234160\&quot;\
-  ,\&quot;vendor\&quot;:\&quot;0001\&quot;},\&quot;network\&quot;:{\&quot;authorized_keys\&quot;:\&quot;\&quot;,\&quot;ipAddressConfig\&quot;\
-  :0,\&quot;macEth0\&quot;:\&quot;00:04:4B:EA:9F:0E\&quot;,\&quot;macEth1\&quot;:\&quot;00:02:01:23:41:60\&quot;,\&quot;networkSpeed\&quot;\
-  :1000,\&quot;staticIPv4Address\&quot;:\&quot;192.168.0.69\&quot;,\&quot;staticIPv4Gateway\&quot;:\&quot;192.168.0.201\&quot;\
-  ,\&quot;staticIPv4SubNetMask\&quot;:\&quot;255.255.255.0\&quot;,\&quot;useDHCP\&quot;:false},\&quot;state\&quot;:{\&quot;errorMessage\&quot;\
-  :\&quot;\&quot;,\&quot;errorNumber\&quot;:\&quot;\&quot;},\&quot;swVersion\&quot;:{\&quot;kernel\&quot;:\&quot;4.9.140-l4t-r32.4+gc35f5eb9d1d9\&quot;\
-  ,\&quot;l4t\&quot;:\&quot;r32.4.3\&quot;,\&quot;os\&quot;:\&quot;0.13.13-221\&quot;,\&quot;schema\&quot;:\&quot;v0.1.0\&quot;,\&quot;swu\&quot;:\&quot;0.15.12\&quot;\
-  }},\&quot;ports\&quot;:{\&quot;port0\&quot;:{\&quot;acquisition\&quot;:{\&quot;framerate\&quot;:10.0,\&quot;version\&quot;:{\&quot;major\&quot;\
-  :0,\&quot;minor\&quot;:0,\&quot;patch\&quot;:0}},\&quot;data\&quot;:{\&quot;algoDebugConfig\&quot;:{},\&quot;availablePCICOutput\&quot;\
-  :[],\&quot;pcicTCPPort\&quot;:50010},\&quot;info\&quot;:{\&quot;device\&quot;:\&quot;2301\&quot;,\&quot;deviceTreeBinaryBlobOverlay\&quot;\
-  :\&quot;001-ov9782.dtbo\&quot;,\&quot;features\&quot;:{\&quot;fov\&quot;:{\&quot;horizontal\&quot;:127,\&quot;vertical\&quot;:80},\&quot;\
-  resolution\&quot;:{\&quot;height\&quot;:800,\&quot;width\&quot;:1280},\&quot;type\&quot;:\&quot;2D\&quot;},\&quot;name\&quot;:\&quot;\&quot;,\&quot;partNumber\&quot;\
-  :\&quot;M03969\&quot;,\&quot;productionState\&quot;:\&quot;AA\&quot;,\&quot;sensor\&quot;:\&quot;OV9782\&quot;,\&quot;sensorID\&quot;:\&quot;OV9782_127x80_noIllu_Csample\&quot;\
-  ,\&quot;serialNumber\&quot;:\&quot;000000000382\&quot;,\&quot;vendor\&quot;:\&quot;0001\&quot;},\&quot;mode\&quot;:\&quot;experimental_autoexposure2D\&quot;\
-  ,\&quot;processing\&quot;:{\&quot;extrinsicHeadToUser\&quot;:{\&quot;rotX\&quot;:0.0,\&quot;rotY\&quot;:0.0,\&quot;rotZ\&quot;:0.0,\&quot;\
-  transX\&quot;:0.0,\&quot;transY\&quot;:0.0,\&quot;transZ\&quot;:0.0},\&quot;version\&quot;:{\&quot;major\&quot;:0,\&quot;minor\&quot;:0,\&quot;\
-  patch\&quot;:0}},\&quot;state\&quot;:\&quot;RUN\&quot;},\&quot;port2\&quot;:{\&quot;acquisition\&quot;:{\&quot;exposureLong\&quot;:5000,\&quot;\
-  exposureShort\&quot;:400,\&quot;framerate\&quot;:10.0,\&quot;offset\&quot;:0.0,\&quot;version\&quot;:{\&quot;major\&quot;:0,\&quot;\
-  minor\&quot;:0,\&quot;patch\&quot;:0}},\&quot;data\&quot;:{\&quot;algoDebugConfig\&quot;:{},\&quot;availablePCICOutput\&quot;\
-  :[],\&quot;pcicTCPPort\&quot;:50012},\&quot;info\&quot;:{\&quot;device\&quot;:\&quot;3101\&quot;,\&quot;deviceTreeBinaryBlobOverlay\&quot;\
-  :\&quot;001-irs2381c.dtbo\&quot;,\&quot;features\&quot;:{\&quot;fov\&quot;:{\&quot;horizontal\&quot;:105,\&quot;vertical\&quot;:78},\&quot;\
-  resolution\&quot;:{\&quot;height\&quot;:172,\&quot;width\&quot;:224},\&quot;type\&quot;:\&quot;3D\&quot;},\&quot;name\&quot;:\&quot;\&quot;,\&quot;partNumber\&quot;\
-  :\&quot;M03969\&quot;,\&quot;productionState\&quot;:\&quot;AA\&quot;,\&quot;sensor\&quot;:\&quot;IRS2381C\&quot;,\&quot;sensorID\&quot;:\&quot;IRS2381C_105x78_4x2W_110x90_C7\&quot;\
-  ,\&quot;serialNumber\&quot;:\&quot;000000000382\&quot;,\&quot;vendor\&quot;:\&quot;0001\&quot;},\&quot;mode\&quot;:\&quot;standard_range2m\&quot;\
-  ,\&quot;processing\&quot;:{\&quot;diParam\&quot;:{\&quot;anfFilterSizeDiv2\&quot;:2,\&quot;enableDynamicSymmetry\&quot;\
-  :true,\&quot;enableStraylight\&quot;:true,\&quot;enableTemporalFilter\&quot;:true,\&quot;excessiveCorrectionThreshAmp\&quot;\
-  :0.3,\&quot;excessiveCorrectionThreshDist\&quot;:0.08,\&quot;maxDistNoise\&quot;:0.02,\&quot;maxSymmetry\&quot;\
-  :0.4,\&quot;medianSizeDiv2\&quot;:0,\&quot;minAmplitude\&quot;:20.0,\&quot;minReflectivity\&quot;:0.0,\&quot;mixedPixelFilterMode\&quot;\
-  :1,\&quot;mixedPixelThresholdRad\&quot;:0.15},\&quot;extrinsicHeadToUser\&quot;:{\&quot;rotX\&quot;:0.0,\&quot;rotY\&quot;\
-  :0.0,\&quot;rotZ\&quot;:0.0,\&quot;transX\&quot;:0.0,\&quot;transY\&quot;:0.0,\&quot;transZ\&quot;:0.0},\&quot;version\&quot;:{\&quot;\
-  major\&quot;:0,\&quot;minor\&quot;:0,\&quot;patch\&quot;:0}},\&quot;state\&quot;:\&quot;RUN\&quot;}}}&quot;
+config: "{\"device\":{\"clock\":{\"currentTime\":1581287336449588512},\"diagnostic\":{\"temperatures\"\
+  :[],\"upTime\":196692000000000},\"info\":{\"device\":\"0301\",\"deviceTreeBinaryBlob\"\
+  :\"tegra186-quill-p3310-1000-c03-00-base.dtb\",\"features\":{},\"name\":\"test\"\
+  ,\"partNumber\":\"M03975\",\"productionState\":\"AA\",\"serialNumber\":\"000201234160\"\
+  ,\"vendor\":\"0001\"},\"network\":{\"authorized_keys\":\"\",\"ipAddressConfig\"\
+  :0,\"macEth0\":\"00:04:4B:EA:9F:0E\",\"macEth1\":\"00:02:01:23:41:60\",\"networkSpeed\"\
+  :1000,\"staticIPv4Address\":\"192.168.0.69\",\"staticIPv4Gateway\":\"192.168.0.201\"\
+  ,\"staticIPv4SubNetMask\":\"255.255.255.0\",\"useDHCP\":false},\"state\":{\"errorMessage\"\
+  :\"\",\"errorNumber\":\"\"},\"swVersion\":{\"kernel\":\"4.9.140-l4t-r32.4+gc35f5eb9d1d9\"\
+  ,\"l4t\":\"r32.4.3\",\"os\":\"0.13.13-221\",\"schema\":\"v0.1.0\",\"swu\":\"0.15.12\"\
+  }},\"ports\":{\"port0\":{\"acquisition\":{\"framerate\":10.0,\"version\":{\"major\"\
+  :0,\"minor\":0,\"patch\":0}},\"data\":{\"algoDebugConfig\":{},\"availablePCICOutput\"\
+  :[],\"pcicTCPPort\":50010},\"info\":{\"device\":\"2301\",\"deviceTreeBinaryBlobOverlay\"\
+  :\"001-ov9782.dtbo\",\"features\":{\"fov\":{\"horizontal\":127,\"vertical\":80},\"\
+  resolution\":{\"height\":800,\"width\":1280},\"type\":\"2D\"},\"name\":\"\",\"partNumber\"\
+  :\"M03969\",\"productionState\":\"AA\",\"sensor\":\"OV9782\",\"sensorID\":\"OV9782_127x80_noIllu_Csample\"\
+  ,\"serialNumber\":\"000000000382\",\"vendor\":\"0001\"},\"mode\":\"experimental_autoexposure2D\"\
+  ,\"processing\":{\"extrinsicHeadToUser\":{\"rotX\":0.0,\"rotY\":0.0,\"rotZ\":0.0,\"\
+  transX\":0.0,\"transY\":0.0,\"transZ\":0.0},\"version\":{\"major\":0,\"minor\":0,\"\
+  patch\":0}},\"state\":\"RUN\"},\"port2\":{\"acquisition\":{\"exposureLong\":5000,\"\
+  exposureShort\":400,\"framerate\":10.0,\"offset\":0.0,\"version\":{\"major\":0,\"\
+  minor\":0,\"patch\":0}},\"data\":{\"algoDebugConfig\":{},\"availablePCICOutput\"\
+  :[],\"pcicTCPPort\":50012},\"info\":{\"device\":\"3101\",\"deviceTreeBinaryBlobOverlay\"\
+  :\"001-irs2381c.dtbo\",\"features\":{\"fov\":{\"horizontal\":105,\"vertical\":78},\"\
+  resolution\":{\"height\":172,\"width\":224},\"type\":\"3D\"},\"name\":\"\",\"partNumber\"\
+  :\"M03969\",\"productionState\":\"AA\",\"sensor\":\"IRS2381C\",\"sensorID\":\"IRS2381C_105x78_4x2W_110x90_C7\"\
+  ,\"serialNumber\":\"000000000382\",\"vendor\":\"0001\"},\"mode\":\"standard_range2m\"\
+  ,\"processing\":{\"diParam\":{\"anfFilterSizeDiv2\":2,\"enableDynamicSymmetry\"\
+  :true,\"enableStraylight\":true,\"enableTemporalFilter\":true,\"excessiveCorrectionThreshAmp\"\
+  :0.3,\"excessiveCorrectionThreshDist\":0.08,\"maxDistNoise\":0.02,\"maxSymmetry\"\
+  :0.4,\"medianSizeDiv2\":0,\"minAmplitude\":20.0,\"minReflectivity\":0.0,\"mixedPixelFilterMode\"\
+  :1,\"mixedPixelThresholdRad\":0.15},\"extrinsicHeadToUser\":{\"rotX\":0.0,\"rotY\"\
+  :0.0,\"rotZ\":0.0,\"transX\":0.0,\"transY\":0.0,\"transZ\":0.0},\"version\":{\"\
+  major\":0,\"minor\":0,\"patch\":0}},\"state\":\"RUN\"}}}"
 </pre></div>
 </div>
 </section>
@@ -186,15 +186,15 @@ config: &quot;{\&quot;device\&quot;:{\&quot;clock\&quot;:{\&quot;currentTime\&qu
 <section id="config">
 <h2>Config<a class="headerlink" href="#config" title="Link to this heading"></a></h2>
 <p>Below you can see an example on how to configure your camera via a rosservice call. The JSON string can be a partial JSON string. It only needs to follow basic JSON syntax.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ rosservice call /ifm3d_ros_examples/camera/Config &quot;json: &#39;{\&quot;ports\&quot;:{\&quot;port2\&quot;:{\&quot;mode\&quot;:\&quot;standard_range2m\&quot;}}}&#39;&quot; 
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ rosservice call /ifm3d_ros_examples/camera/Config "json: '{\"ports\":{\"port2\":{\"mode\":\"standard_range2m\"}}}'" 
 status: 0
-msg: &quot;OK&quot;
+msg: "OK"
 </pre></div>
 </div>
 <p>This is equivalent to:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ rosservice call /ifm3d_ros_examples/camera/Config &#39;&quot;{\&quot;ports\&quot;:{\&quot;port2\&quot;:{\&quot;mode\&quot;:\&quot;standard_range2m\&quot;}}}&quot;&#39;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ rosservice call /ifm3d_ros_examples/camera/Config '"{\"ports\":{\"port2\":{\"mode\":\"standard_range2m\"}}}"'
 status: 0
-msg: &quot;OK&quot;
+msg: "OK"
 
 </pre></div>
 </div>
@@ -212,182 +212,182 @@ They are part of the <code class="docutils literal notranslate"><span class="pre
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ roslaunch ifm3d_ros_examples camera_3d.launch &amp;
 $ rosrun ifm3d_ros_msgs dump
 {
-  &quot;device&quot;: {
-    &quot;clock&quot;: {
-      &quot;currentTime&quot;: 1581193835185485800
+  "device": {
+    "clock": {
+      "currentTime": 1581193835185485800
     },
-    &quot;diagnostic&quot;: {
-      &quot;temperatures&quot;: [],
-      &quot;upTime&quot;: 103190000000000
+    "diagnostic": {
+      "temperatures": [],
+      "upTime": 103190000000000
     },
-    &quot;info&quot;: {
-      &quot;device&quot;: &quot;0301&quot;,
-      &quot;deviceTreeBinaryBlob&quot;: &quot;tegra186-quill-p3310-1000-c03-00-base.dtb&quot;,
-      &quot;features&quot;: {},
-      &quot;name&quot;: &quot;&quot;,
-      &quot;  partNumber&quot;: &quot;M03975&quot;,
-      &quot;productionState&quot;: &quot;AA&quot;,
-      &quot;serialNumber&quot;: &quot;000201234160&quot;,
-      &quot;vendor&quot;: &quot;0001&quot;
+    "info": {
+      "device": "0301",
+      "deviceTreeBinaryBlob": "tegra186-quill-p3310-1000-c03-00-base.dtb",
+      "features": {},
+      "name": "",
+      "  partNumber": "M03975",
+      "productionState": "AA",
+      "serialNumber": "000201234160",
+      "vendor": "0001"
     },
-    &quot;network&quot;: {
-      &quot;authorized_keys&quot;: &quot;&quot;,
-      &quot;ipAddressConfig&quot;: 0,
-      &quot;macEth0&quot;: &quot;00:04:4B:EA:9F:0E&quot;,
-      &quot;macEth1&quot;: &quot;00:02:01:23:41:60&quot;,
-      &quot;networkSpeed&quot;: 1000,
-      &quot;staticIPv4Address&quot;: &quot;192.168.0.69&quot;,
-      &quot;staticIPv4Gateway&quot;: &quot;192.168.0.201&quot;,
-      &quot;staticIPv4SubNetMask&quot;: &quot;255.255.255.0&quot;,
-      &quot;useDHCP&quot;: false
+    "network": {
+      "authorized_keys": "",
+      "ipAddressConfig": 0,
+      "macEth0": "00:04:4B:EA:9F:0E",
+      "macEth1": "00:02:01:23:41:60",
+      "networkSpeed": 1000,
+      "staticIPv4Address": "192.168.0.69",
+      "staticIPv4Gateway": "192.168.0.201",
+      "staticIPv4SubNetMask": "255.255.255.0",
+      "useDHCP": false
     },
-    &quot;state&quot;: {
-      &quot;errorMessage&quot;: &quot;&quot;,
-      &quot;errorNumber&quot;: &quot;&quot;
+    "state": {
+      "errorMessage": "",
+      "errorNumber": ""
     },
-    &quot;swVersion&quot;: {
-      &quot;kernel&quot;: &quot;4.9.140-l4t-r32.4+gc35f5eb9d1d9&quot;,
-      &quot;l4t&quot;: &quot;r32.4.3&quot;,
-      &quot;os&quot;: &quot;0.13.13-221&quot;,
-      &quot;schema&quot;: &quot;v0.1.0&quot;,
-      &quot;swu&quot;: &quot;0.15.12&quot;
+    "swVersion": {
+      "kernel": "4.9.140-l4t-r32.4+gc35f5eb9d1d9",
+      "l4t": "r32.4.3",
+      "os": "0.13.13-221",
+      "schema": "v0.1.0",
+      "swu": "0.15.12"
     }
   },
-  &quot;ports&quot;: {
-    &quot;port0&quot;: {
-      &quot;acquisition&quot;: {
-        &quot;framerate&quot;: 10,
-        &quot;version&quot;: {
-          &quot;major&quot;: 0,
-          &quot;minor&quot;: 0,
-          &quot;patch&quot;: 0
+  "ports": {
+    "port0": {
+      "acquisition": {
+        "framerate": 10,
+        "version": {
+          "major": 0,
+          "minor": 0,
+          "patch": 0
         }
       },
-      &quot;data&quot;: {
-        &quot;algoDebugConfig&quot;: {},
-        &quot;availablePCICOutput&quot;: [],
-        &quot;pcicTCPPort&quot;: 50010
+      "data": {
+        "algoDebugConfig": {},
+        "availablePCICOutput": [],
+        "pcicTCPPort": 50010
       },
-      &quot;info&quot;: {
-        &quot;device&quot;: &quot;2301&quot;,
-        &quot;deviceTreeBinaryBlobOverlay&quot;: &quot;001-ov9782.dtbo&quot;,
-        &quot;features&quot;: {
-          &quot;fov&quot;: {
-            &quot;horizontal&quot;: 127,
-            &quot;vertical&quot;: 80
+      "info": {
+        "device": "2301",
+        "deviceTreeBinaryBlobOverlay": "001-ov9782.dtbo",
+        "features": {
+          "fov": {
+            "horizontal": 127,
+            "vertical": 80
           },
-          &quot;  resolution&quot;: {
-            &quot;height&quot;: 800,
-            &quot;width&quot;: 1280
+          "  resolution": {
+            "height": 800,
+            "width": 1280
           },
-          &quot;type&quot;: &quot;2D&quot;
+          "type": "2D"
         },
-        &quot;name&quot;: &quot;&quot;,
-        &quot;partNumber&quot;: &quot;M03969&quot;,
-        &quot;productionState&quot;: &quot;AA&quot;,
-        &quot;sensor&quot;: &quot;OV9782&quot;,
-        &quot;sensorID&quot;: &quot;OV9782_127x80_noIllu_Csample&quot;,
-        &quot;serialNumber&quot;: &quot;000000000382&quot;,
-        &quot;vendor&quot;: &quot;0001&quot;
+        "name": "",
+        "partNumber": "M03969",
+        "productionState": "AA",
+        "sensor": "OV9782",
+        "sensorID": "OV9782_127x80_noIllu_Csample",
+        "serialNumber": "000000000382",
+        "vendor": "0001"
       },
-      &quot;mode&quot;: &quot;experimental_autoexposure2D&quot;,
-      &quot;processing&quot;: {
-        &quot;extrinsicHeadToUser&quot;: {
-          &quot;rotX&quot;: 0,
-          &quot;rotY&quot;: 0,
-          &quot;rotZ&quot;: 0,
-          &quot;  transX&quot;: 0,
-          &quot;transY&quot;: 0,
-          &quot;transZ&quot;: 0
+      "mode": "experimental_autoexposure2D",
+      "processing": {
+        "extrinsicHeadToUser": {
+          "rotX": 0,
+          "rotY": 0,
+          "rotZ": 0,
+          "  transX": 0,
+          "transY": 0,
+          "transZ": 0
         },
-        &quot;version&quot;: {
-          &quot;major&quot;: 0,
-          &quot;minor&quot;: 0,
-          &quot;  patch&quot;: 0
+        "version": {
+          "major": 0,
+          "minor": 0,
+          "  patch": 0
         }
       },
-      &quot;state&quot;: &quot;RUN&quot;
+      "state": "RUN"
     },
-    &quot;port2&quot;: {
-      &quot;acquisition&quot;: {
-        &quot;exposureLong&quot;: 5000,
-        &quot;  exposureShort&quot;: 400,
-        &quot;framerate&quot;: 10,
-        &quot;offset&quot;: 0,
-        &quot;version&quot;: {
-          &quot;major&quot;: 0,
-          &quot;  minor&quot;: 0,
-          &quot;patch&quot;: 0
+    "port2": {
+      "acquisition": {
+        "exposureLong": 5000,
+        "  exposureShort": 400,
+        "framerate": 10,
+        "offset": 0,
+        "version": {
+          "major": 0,
+          "  minor": 0,
+          "patch": 0
         }
       },
-      &quot;data&quot;: {
-        &quot;algoDebugConfig&quot;: {},
-        &quot;availablePCICOutput&quot;: [],
-        &quot;pcicTCPPort&quot;: 50012
+      "data": {
+        "algoDebugConfig": {},
+        "availablePCICOutput": [],
+        "pcicTCPPort": 50012
       },
-      &quot;info&quot;: {
-        &quot;device&quot;: &quot;3101&quot;,
-        &quot;deviceTreeBinaryBlobOverlay&quot;: &quot;001-irs2381c.dtbo&quot;,
-        &quot;features&quot;: {
-          &quot;fov&quot;: {
-            &quot;horizontal&quot;: 105,
-            &quot;vertical&quot;: 78
+      "info": {
+        "device": "3101",
+        "deviceTreeBinaryBlobOverlay": "001-irs2381c.dtbo",
+        "features": {
+          "fov": {
+            "horizontal": 105,
+            "vertical": 78
           },
-          &quot;  resolution&quot;: {
-            &quot;height&quot;: 172,
-            &quot;width&quot;: 224
+          "  resolution": {
+            "height": 172,
+            "width": 224
           },
-          &quot;type&quot;: &quot;3D&quot;
+          "type": "3D"
         },
-        &quot;name&quot;: &quot;&quot;,
-        &quot;partNumber&quot;: &quot;M03969&quot;,
-        &quot;productionState&quot;: &quot;AA&quot;,
-        &quot;sensor&quot;: &quot;IRS2381C&quot;,
-        &quot;sensorID&quot;: &quot;IRS2381C_105x78_4x2W_110x90_C7&quot;,
-        &quot;serialNumber&quot;: &quot;000000000382&quot;,
-        &quot;vendor&quot;: &quot;0001&quot;
+        "name": "",
+        "partNumber": "M03969",
+        "productionState": "AA",
+        "sensor": "IRS2381C",
+        "sensorID": "IRS2381C_105x78_4x2W_110x90_C7",
+        "serialNumber": "000000000382",
+        "vendor": "0001"
       },
-      &quot;mode&quot;: &quot;standard_range4m&quot;,
-      &quot;processing&quot;: {
-        &quot;diParam&quot;: {
-          &quot;anfFilterSizeDiv2&quot;: 2,
-          &quot;enableDynamicSymmetry&quot;: true,
-          &quot;enableStraylight&quot;: true,
-          &quot;enableTemporalFilter&quot;: true,
-          &quot;excessiveCorrectionThreshAmp&quot;: 0.3,
-          &quot;excessiveCorrectionThreshDist&quot;: 0.08,
-          &quot;maxDistNoise&quot;: 0.02,
-          &quot;maxSymmetry&quot;: 0.4,
-          &quot;medianSizeDiv2&quot;: 0,
-          &quot;minAmplitude&quot;: 20,
-          &quot;minReflectivity&quot;: 0,
-          &quot;mixedPixelFilterMode&quot;: 1,
-          &quot;mixedPixelThresholdRad&quot;: 0.15
+      "mode": "standard_range4m",
+      "processing": {
+        "diParam": {
+          "anfFilterSizeDiv2": 2,
+          "enableDynamicSymmetry": true,
+          "enableStraylight": true,
+          "enableTemporalFilter": true,
+          "excessiveCorrectionThreshAmp": 0.3,
+          "excessiveCorrectionThreshDist": 0.08,
+          "maxDistNoise": 0.02,
+          "maxSymmetry": 0.4,
+          "medianSizeDiv2": 0,
+          "minAmplitude": 20,
+          "minReflectivity": 0,
+          "mixedPixelFilterMode": 1,
+          "mixedPixelThresholdRad": 0.15
         },
-        &quot;extrinsicHeadToUser&quot;: {
-          &quot;rotX&quot;: 1,
-          &quot;rotY&quot;: 0,
-          &quot;rotZ&quot;: 0,
-          &quot;transX&quot;: 100,
-          &quot;transY&quot;: 0,
-          &quot;transZ&quot;: 0
+        "extrinsicHeadToUser": {
+          "rotX": 1,
+          "rotY": 0,
+          "rotZ": 0,
+          "transX": 100,
+          "transY": 0,
+          "transZ": 0
         },
-        &quot;version&quot;: {
-          &quot;  major&quot;: 0,
-          &quot;minor&quot;: 0,
-          &quot;patch&quot;: 0
+        "version": {
+          "  major": 0,
+          "minor": 0,
+          "patch": 0
         }
       },
-      &quot;state&quot;: &quot;RUN&quot;
+      "state": "RUN"
     }
   }
 }
 </pre></div>
 </div>
 <p>Chaining together Linux pipelines works just as it does in <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code>. For example, using a combination of <code class="docutils literal notranslate"><span class="pre">dump</span></code> and <code class="docutils literal notranslate"><span class="pre">config</span></code> to set a new name on the camera would look like:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ rosrun ifm3d dump | jq &#39;.ports.port0.mode=&quot;standard_range2m&quot;&#39; | rosrun ifm3d config 
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ rosrun ifm3d dump | jq '.ports.port0.mode="standard_range2m"' | rosrun ifm3d config 
 $ rosrun ifm3d dump | jq .ports.port0.mode
-&quot;experimental_high_2m&quot;
+"experimental_high_2m"
 </pre></div>
 </div>
 <blockquote>
@@ -395,7 +395,7 @@ $ rosrun ifm3d dump | jq .ports.port0.mode
 </div></blockquote>
 <p>For the <code class="docutils literal notranslate"><span class="pre">config</span></code> command, one difference between our ROS implementation and the <code class="docutils literal notranslate"><span class="pre">ifm3d</span></code> implementation is that we only accept input on <code class="docutils literal notranslate"><span class="pre">stdin</span></code>. So, if you had a file with JSON you wish to configure your camera with, you would simply use the file I/O redirection facilities of your shell (or something like <code class="docutils literal notranslate"><span class="pre">cat</span></code>) to feed the data to <code class="docutils literal notranslate"><span class="pre">stdin</span></code>. For example, in <code class="docutils literal notranslate"><span class="pre">bash</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ rosrun ifm3d dump &gt; dump.json
-$ cat dump.json | jq &#39;.ports.port0.mode=&quot;experimental_high_2m&quot;&#39; &gt; config.json
+$ cat dump.json | jq '.ports.port0.mode="experimental_high_2m"' &gt; config.json
 $ rosrun ifm3d config &lt; config.json
 </pre></div>
 </div>

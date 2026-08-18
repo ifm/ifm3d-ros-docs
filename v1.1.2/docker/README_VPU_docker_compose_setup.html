@@ -154,7 +154,7 @@ Docker container</p>
 <ul class="simple">
 <li><p>Docker Containers:</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">IFM3D_IP</span><span class="o">=</span><span class="s2">&quot;127.0.0.1&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">IFM3D_IP</span><span class="o">=</span><span class="s2">"127.0.0.1"</span>
 <span class="n">export</span> <span class="n">ROS_MASTER_URI</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">ifm3d_rosmaster</span><span class="p">:</span><span class="mi">11311</span>
 <span class="n">export</span> <span class="n">ROS_HOSTNAME</span><span class="o">=</span><span class="n">ifm3d_ros</span>
 </pre></div>
@@ -168,38 +168,38 @@ Docker container</p>
 </div>
 <p>The corresponding DNS <code class="docutils literal notranslate"><span class="pre">/etc/hosts</span></code> - see above</p>
 <p>Dockerfile</p>
-<div class="highlight-yml notranslate"><div class="highlight"><pre><span></span>version: &quot;2.3&quot;
-services:
-  ifm3d_ros:
-    tty: true
-    image: ifm3d-ros:noetic-arm64_v8
+<div class="highlight-yml notranslate"><div class="highlight"><pre><span></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">"2.3"</span>
+<span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ifm3d_ros</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">tty</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ifm3d-ros:noetic-arm64_v8</span>
 
-    restart: unless-stopped
-    volumes:
-      - ./launch/four_cameras.launch:/home/ifm/catkin_ws/src/ifm3d_ros_driver/launch/four_cameras.launch
-      - ./hosts_ros_master:/etc/hosts/
+<span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./launch/four_cameras.launch:/home/ifm/catkin_ws/src/ifm3d_ros_driver/launch/four_cameras.launch</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./hosts_ros_master:/etc/hosts/</span>
 
-    logging:
-      driver: &quot;json-file&quot;
-      options:
-        mode: non-blocking
-        max-buffer-size: &quot;20m&quot;
+<span class="w">    </span><span class="nt">logging</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="s">"json-file"</span>
+<span class="w">      </span><span class="nt">options</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">non-blocking</span>
+<span class="w">        </span><span class="nt">max-buffer-size</span><span class="p">:</span><span class="w"> </span><span class="s">"20m"</span>
 
-    command:
-      - /bin/bash
-      - -c
-      - |
-        set -a
-        . /opt/ros/noetic/setup.sh;
-        . /home/ifm/catkin_ws/devel/setup.sh;
-        export IFM3D_IP=&quot;127.0.0.1&quot;;
-        export ROS_MASTER_URI=http://ifm3d_rosmaster:11311;
-        export ROS_HOSTNAME=ifm3d_ros;
-        echo $$ROS_MASTER_URI;
-        echo $$ROS_IP;
-        roslaunch ifm3d_ros_driver four_cameras.launch --wait -t 10
+<span class="w">    </span><span class="nt">command</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/bin/bash</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-c</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">set -a</span>
+<span class="w">        </span><span class="no">. /opt/ros/noetic/setup.sh;</span>
+<span class="w">        </span><span class="no">. /home/ifm/catkin_ws/devel/setup.sh;</span>
+<span class="w">        </span><span class="no">export IFM3D_IP="127.0.0.1";</span>
+<span class="w">        </span><span class="no">export ROS_MASTER_URI=http://ifm3d_rosmaster:11311;</span>
+<span class="w">        </span><span class="no">export ROS_HOSTNAME=ifm3d_ros;</span>
+<span class="w">        </span><span class="no">echo $$ROS_MASTER_URI;</span>
+<span class="w">        </span><span class="no">echo $$ROS_IP;</span>
+<span class="w">        </span><span class="no">roslaunch ifm3d_ros_driver four_cameras.launch --wait -t 10</span>
 
-    network_mode: host
+<span class="w">    </span><span class="nt">network_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">host</span>
 </pre></div>
 </div>
 </section>
@@ -213,53 +213,52 @@ Please note that the following changes may result in routing tables that are not
 <p><strong>When creating/modifying networks on the VPU, please consider your existing network topology and possible conflicts!</strong>.</p>
 <p><strong>Docker compose including network setup:</strong>.
 This includes setting up a dedicated <code class="docutils literal notranslate"><span class="pre">ros_net</span></code> Docker network for shared communication between Docker containers.</p>
-<div class="highlight-yml notranslate"><div class="highlight"><pre><span></span>version: &quot;2.3&quot;
-services:
-  ifm3d_ros:
-    tty: true
-    image: ifm3d-ros:noetic-arm64_v8
+<div class="highlight-yml notranslate"><div class="highlight"><pre><span></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">"2.3"</span>
+<span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ifm3d_ros</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">tty</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ifm3d-ros:noetic-arm64_v8</span>
 
-    extra_hosts:
-      - &quot;dockerhost:172.20.0.1&quot;
+<span class="w">    </span><span class="nt">extra_hosts</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"dockerhost:172.20.0.1"</span>
 
-    networks:
-      ros_net:
-        ipv4_address: 172.20.0.2
+<span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">ros_net</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">ipv4_address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">172.20.0.2</span>
 
-    ports:
-      - 11311:11311
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">11311:11311</span>
 
 
-    restart: unless-stopped
-    volumes:
-      - ./launch/four_cameras.launch:/home/ifm/catkin_ws/src/ifm3d_ros_driver/launch/four_cameras.launch
-    logging:
-      driver: &quot;json-file&quot;
-      options:
-        mode: non-blocking
-        max-buffer-size: &quot;20m&quot;
+<span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./launch/four_cameras.launch:/home/ifm/catkin_ws/src/ifm3d_ros_driver/launch/four_cameras.launch</span>
+<span class="w">    </span><span class="nt">logging</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="s">"json-file"</span>
+<span class="w">      </span><span class="nt">options</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">non-blocking</span>
+<span class="w">        </span><span class="nt">max-buffer-size</span><span class="p">:</span><span class="w"> </span><span class="s">"20m"</span>
 
-    command:
-      - /bin/bash
-      - -c
-      - |
-        (. /opt/ros/noetic/setup.sh;
-        . /home/ifm/catkin_ws/devel/setup.sh;
-        export ROS_MASTER_URI=http://172.20.0.2:11311;
-        export ROS_HOSTNAME=172.20.0.2;
-        echo ROS_MASTER_URI=$$ROS_MASTER_URI;
-        echo ROS_HOSTNAME=$$ROS_HOSTNAME;
-        roscore &amp;
-        roslaunch ifm3d_ros_driver four_cameras.launch --wait -t 10)
+<span class="w">    </span><span class="nt">command</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/bin/bash</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-c</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">        </span><span class="no">(. /opt/ros/noetic/setup.sh;</span>
+<span class="w">        </span><span class="no">. /home/ifm/catkin_ws/devel/setup.sh;</span>
+<span class="w">        </span><span class="no">export ROS_MASTER_URI=http://172.20.0.2:11311;</span>
+<span class="w">        </span><span class="no">export ROS_HOSTNAME=172.20.0.2;</span>
+<span class="w">        </span><span class="no">echo ROS_MASTER_URI=$$ROS_MASTER_URI;</span>
+<span class="w">        </span><span class="no">echo ROS_HOSTNAME=$$ROS_HOSTNAME;</span>
+<span class="w">        </span><span class="no">roscore &amp;</span>
+<span class="w">        </span><span class="no">roslaunch ifm3d_ros_driver four_cameras.launch --wait -t 10)</span>
 
-networks:
-  ros_net:
-    ipam:
-      driver: default
-      config:
-        - subnet: 172.20.0.0/16
-          gateway: 172.20.0.1
-
+<span class="nt">networks</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">ros_net</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">ipam</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+<span class="w">      </span><span class="nt">config</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">subnet</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">172.20.0.0/16</span>
+<span class="w">          </span><span class="nt">gateway</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">172.20.0.1</span>
 </pre></div>
 </div>
 <p>Depending on Docker and the docker-compose version a first initial manual setup of such a Docker network might be required:</p>
